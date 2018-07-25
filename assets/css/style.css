@@ -1,0 +1,76 @@
+body {
+ background-image: url(../images/blackbg.jpg); 
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ font-size: 20px;
+}
+
+  * {
+    color: rgb(221, 216, 216);
+}
+
+ img  {
+  border-radius:75%;
+  padding:15px;
+  border:10px;
+  border-color: black;
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 300px;
+  font-size: 23px;
+  padding:10px;
+  margin-top:-10px;
+  margin-bottom: 20px;
+  border:10px;  
+  position:relative;
+  float:center;
+  -webkit-text-stroke-width: .25px;
+  -webkit-text-stroke-color: black;
+}
+
+.col-sm-6   {
+  width:25%;
+  padding:10px;
+  border:0px;
+}
+
+.col-sm-12   {
+  padding:90px;
+  margin-top: -75px;
+}
+
+
+.footer  {
+  float:center;
+  text-align:center;
+  font-size:13px;
+  text-align:center;
+}
+
+.topnav a{
+  padding:10px;
+  color:white;
+font-size:16px;
+font-family: Century Gothic;
+}
+
+.col-lg-12 {
+  text-align: center;
+  padding:20px;
+font-family: Century Gothic;
+fill-opacity: inherit;
+-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+-webkit-text-stroke-width: .25px;
+  -webkit-text-stroke-color: rgb(214, 18, 165);
+  -webkit-text-stroke-width: .25px;
+  -webkit-text-stroke-color: rgb(14, 3, 3);
+
+}
+
+ 
+
