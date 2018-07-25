@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CandyManGame</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<div id="wrapper">
+				<h1 class="chrome">Candyman Name</h1>
+				<h1 class="victory">
+					<span class="victory-v">G</span>ame</h1>
+				<h1 class="cop">Press Any Key to Start</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="panel-heading--panel-custom">
+				<div class="panel-heading">
+					<h3 class="panel-title">Can you guess the Candy?</h3>
+
+				</div>
+				<div class="panel-body">
+					<h2 id="wordToGuess">_ _ _ _ _ _ _ _ _ _ _ _</h2>
+				</div>
+			</div>
+
+			<div class="panel-body- panel-custom">
+				<div class="panel-body">
+					Letters Used:
+					<span id="wrongGuesses"></span>
+				</div>
+			</div>
+
+			<div class="panel-body -panel-custom">
+				<div class="panel-body">
+					Guesses Left:
+					<span id="numGuesses"></span>
+				</div>
+			</div>
+
+			<div class="panel-body-panel-custom">
+				<div class="panel-body">
+					Win Counter:
+					<span id="winCounter">0</span>
+				</div>
+			</div>
+
+			<div class="panel-body panel-custom">
+				<div class="panel-body">
+					Loss Counter:
+					<span id="lossCounter">0</span>
+				</div>
+			</div>
+
+		</div>
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
