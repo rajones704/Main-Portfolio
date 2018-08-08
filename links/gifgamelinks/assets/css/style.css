@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/pbj3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:white;
+     font-family: Century Gothic;
+    fill-opacity: inherit;    
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .25px;
+    font-size:20px;
+}
+.header {
+    padding: 35px;
+    fill-opacity: inherit;    
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: .5px;
+    font-size: 50px;
+    text-align: center;
+}
+ 
+.container{
+    padding: 25px;
+    font-size:30px;
+    text-align: center;
+}
+
+#gif-button{
+    padding: 10px;
+}

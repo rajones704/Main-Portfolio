@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy Butter</title>
+  <link rel= "stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class = "header">
+    <h1>Giphy Butter Jelly Time & A Baseball Bat</h1>
+    </div>
+
+    <div class="container">
+  
+  <button data-person="Peanut">Peanut</button>
+  <button data-person="Butter">Butter</button>
+  <button data-person="Jelly">Jelly</button>
+  <button data-person="Time">Time</button>
+  <button data-person="Baseball">Baseball</button>
+  <button data-person="Bat">Bat</button>
+
+  <div id="topics-view">
+
+    <form id="topic-form">
+      <label for="topic-input">Add a Topic</label>
+      <input type="text" id="topic-input"><br>
+      <input id="add-topic" type="submit" value="Add a Topic">
+    </form>
+
+  <div id="gifs-appear-here">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Event listener for all button elements
+    $("button").on("click", function() {
+      // In this case, the "this" keyword refers to the button that was clicked
+      var person = $(this).attr("data-person");
+
+      // Constructing a URL to search Giphy for the name of the person who said the quote
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        person + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+      // Performing our AJAX GET request
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+        // After the data comes back from the API
+        .then(function(response) {
+          // Storing an array of results in the results variable
+          var results = response.data;
+
+          // Looping over every result item
+          for (var i = 0; i < results.length; i++) {
+
+            // Only taking action if the photo has an appropriate rating
+            if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+              // Creating a div with the class "item"
+              var gifDiv = $("<div class='item'>");
+
+              // Storing the result item's rating
+              var rating = results[i].rating;
+
+              // Creating a paragraph tag with the result item's rating
+              var p = $("<p>").text("Rating: " + rating);
+
+              // Creating an image tag
+              var personImage = $("<img>");
+
+              // Giving the image tag an src attribute of a proprty pulled off the
+              // result item
+              personImage.attr("src", results[i].images.fixed_height.url);
+
+              // Appending the paragraph and personImage we created to the "gifDiv" div we created
+              gifDiv.append(p);
+              gifDiv.append(personImage);
+
+              // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+              $("#gifs-appear-here").prepend(gifDiv);
+          
+          // This function handles events where one button is clicked
+      $("#add-topic").on("click", function(event) {
+        // event.preventDefault() prevents the form from trying to submit itself.
+        // We're using a form so that the user can hit enter instead of clicking the button if they want
+        event.preventDefault();
+
+        // This line will grab the text from the input box
+        var person = $("#topic-input").val().trim();
+        // The movie from the textbox is then added to our array
+        person.push(persons);
+
+        // calling renderButtons which handles the processing of our movie array
+        renderButtons();
+      });
+            }
+          }
+        });
+    });
+  </script>
+</body>
+
+</html>
