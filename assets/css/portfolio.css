@@ -17,16 +17,6 @@
 	transition: filter 1s;
 }
 
-.nav-item:hover{
-    background-color:palevioletred;
-    text-shadow:50%;
-    color:white;
-    border-color:white;
-    border-width:5px;
-	text-shadow: 1px 1px 1px black;
-	border-radius:20%;
-  }
-
 /* Layout Styles */
 html, body {
 	width: 100%;
