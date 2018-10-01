@@ -1,0 +1,23 @@
+#video-background {
+    /*  making the video fullscreen  */
+      position: fixed;
+      left:0;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      height: auto;
+      z-index: -90;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      overflow:hidden;
+}
+
+*{
+    color:white;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color:red;
+    text-shadow: .5px .5px .5px black;
+}
+
