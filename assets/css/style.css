@@ -29,35 +29,67 @@ body {
     color: rgb(221, 216, 216);
 }
 
+p {
+  float:left;
+  padding: 5%;
+  font-size: 40px;
+  font-family: Century Gothic;
+  fill-opacity: inherit;
+  text-shadow: 0px 0px 10px;
+  color:white;
+  text-align: justify
+}
+
 h1 {
   position: absolute;
   float:left;
   padding: 5%;
+  margin-top:-20px;
   overflow:hidden;
   display:inline;
   text-align: center;
   font-size: 1200%;
-font-family: Century Gothic;
-fill-opacity: inherit;
--webkit-text-stroke-width: .75px;
+  font-family: Century Gothic;
+  fill-opacity: inherit;
+  -webkit-text-stroke-width: .75px;
   -webkit-text-stroke-color: black;
   text-shadow: 0px 0px 10px;
   color:white;
-
-  
 }
 
 h2 {
-  padding: 100px;
-  font-size:100px;
-  text-align:center;
-  margin-left:150px;
-  margin-right: 100px;
   position:relative;
-  
+  display: block;
+  font-size:50px;
+  float:center;
+  padding: 0%;
+  margin-top:-40px;
+  font-family: Century Gothic;
+  fill-opacity: inherit;
+  color:white;
+  padding-top:25%;
+  text-align: center;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #7794ff, 
+                    rgb(77, 36, 121),
+                    #FF1361,
+                    #FFF800);
 }
+
  img  {
-   position: relative;
+  position: relative;
   padding-bottom:2%;
   border-radius:75%;
   display: inline;
@@ -70,19 +102,15 @@ h2 {
   object-fit:cover ; 
   margin-bottom: 50%;
   margin-top: -49%;
-margin-left:-37.4%
+  margin-left:-37.4%
 }
 
-
-
-#text{
-  display: block;
-  position: relative;
-  padding-top:25%;
+#text {
+  margin-left:45px;
+  padding:10px;
   text-align: center;
-  font-size:40px;
-  -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: black;
+  box-shadow: 1px 1px 1px 2px hsl(210, 14%, 3%);
+
 }
 
 #about-text{
@@ -92,16 +120,6 @@ margin-left:-37.4%
   white-space: nowrap; 
   animation:blinkingText 0.8s infinite;
 
-
-}
-
-  @import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic);
-  body,
-  html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family:century;
   }
   
   main {
@@ -331,6 +349,41 @@ margin-left:-37.4%
     -o-transition: all 1s ease;
     transition: all 1s ease;
   }
+
+  .btn{
+    border-color:  hsl(327, 87%, 48%);
+    border-width: 0ch;
+    border-radius: 5px;
+    padding:5%;
+    margin-top:25px;
+    color:white;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 0px  hsl(209, 95%, 37%);
+    z-index: 0;
+    background-position: right center; /* change the direction of the change here */
+    background-image: linear-gradient(to left , rgb(204, 238, 10), hsl(327, 87%, 48%) ,hsl(207, 93%, 54%));
+  }
+
+  .btn:hover{
+    color:white;
+    background-position: center left; /* change the direction of the change here */
+    background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%));
+    box-shadow: 0px 5px 35px hsl(192, 15%, 94%);   
+
+  }
+
+  img:hover{
+    color:white;
+    background-position: center left; /* change the direction of the change here */
+    /* background-image: linear-gradient(to left, hsl(61, 94%, 48%), hsl(335, 85%, 55%),hsl(194, 92%, 48%)); */
+    box-shadow: 0px 5px 35px hsl(192, 15%, 94%);   
+
+  }
+
   
   @media (min-width: 480px) {
     .nav-list {
@@ -397,7 +450,7 @@ margin-left:-37.4%
     padding: 15px;
   }
 
-  form {
+.form {
   padding: 50px;
   margin-bottom:150px;
   margin-top:-35px;
@@ -409,12 +462,11 @@ background-color: rgba(245, 238, 238, 0.911);
 
 #exampleFormControlInput1{
 background-color: rgba(245, 238, 238, 0.911);
-
 }
 
 #exampleFormControlTextarea1{
   background-color: rgba(245, 238, 238, 0.911);  
-  }
+}
    
 .nav-item:hover{
   background-color:white;
